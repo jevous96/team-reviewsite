@@ -7,6 +7,10 @@ import Footer from './component/Footer'
 //page
 import Home from './page/Main'
 import News from './page/News'
+// data
+import MovieData from './data/movie.json'
+import ReviwData from './data/movie/json'
+
 
 function App(){
   return(
