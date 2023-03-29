@@ -1,18 +1,26 @@
 
 
-function Home(){
+
+function Listup({data}){
+  return data.map((item,index) => {
+    return (
+      <li key={index}>{item.reveiw}</li>
+    )
+  })
+
+
+}
+
+
+function Home({data}){
   return(
     <article id="home">
       <div id="homewrap">
         <ul id="recent">
-          <li>최신영화1</li>
-          <li>최신영화2</li>
-          <li>최신영화3</li>
+            <Listup data = {data}/>
         </ul>
         <ul id="best">
-          <li>최신영화1</li>
-          <li>최신영화2</li>
-          <li>최신영화3</li>
+          <Listup data = {data}/>
         </ul>
         <div id="news">
           <p>뉴-스</p>
