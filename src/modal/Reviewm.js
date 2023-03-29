@@ -1,29 +1,40 @@
 
 
-function ReviewM(){
+function ReviewDetail({Rdata}){
+  return Rdata.map((item,index) => {
+    return (
+      <figure key={index}>
+        <img src="" alt="" />
+        <figcaption>
+          <h3>{item.name}</h3>
+          <p className="score">{item.score}점</p>
+          <p>{item.reveiw}</p>
+        </figcaption>
+      </figure>
+    )
+  })
+}
+
+function ReviewM({Rdata, Mdata, clue}){
+  let FiltData = Mdata.filter((item) => {
+    return item.name === clue
+  })
   return (
     <div id="reviewmodal">
       <div id="modalbox">
         <div id="moviedata">
           <p className="video">
-            iframespace
+            {FiltData[0].name}
           </p>
           <div className="videoinfo">
-            <p className="score">평가결과</p>
+            <p className="score">{Math.floor(FiltData[0].score)}</p>
             <p className="story">
-              시놉시스어쩌구저쩌구
+              {FiltData[0].story}
             </p>
           </div>
         </div>
         <div id="reviewdata">
-          <figure>
-            <img src="" alt="" />
-            <figcaption>
-              <h3>이름</h3>
-              <p className="score">개인점수</p>
-              <p>코멘트</p>
-            </figcaption>
-          </figure>
+          <ReviewDetail Rdata = {Rdata}/>
         </div>
       </div>
     </div>

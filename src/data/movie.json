@@ -5,7 +5,9 @@
     "story" : "this story is start from xxxx end is xxxx",
     "src" : "youtube.com",
     "pic" :"path",
-    "date" : "2021-02-03"
+    "date" : "2021-02-03",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
   },
   {
     "id" : 1,
@@ -13,7 +15,9 @@
     "story" : "this story is start from xxxx end is xxxx",
     "src" : "youtube.com",
     "pic" :"path",
-    "date" : "2022-03-14"
+    "date" : "2022-03-14",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
   },
   {
     "id" : 2,
@@ -21,7 +25,9 @@
     "story" : "this story is start from xxxx end is xxxx",
     "src" : "youtube.com",
     "pic" :"path",
-    "date" : "2023-01-01"
+    "date" : "2023-01-01",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
   },
   {
     "id" : 3,
@@ -29,7 +35,9 @@
     "story" : "this story is start from xxxx end is xxxx",
     "src" : "youtube.com",
     "pic" :"path",
-    "date" : "2021-08-08"
+    "date" : "2021-08-08",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
   },
   {
     "id" : 4,
@@ -37,6 +45,8 @@
     "story" : "this story is start from xxxx end is xxxx",
     "src" : "youtube.com",
     "pic" :"path",
-    "date" : "2023-04-05"
+    "date" : "2023-04-05",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
   }
 ]

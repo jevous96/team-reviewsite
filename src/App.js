@@ -10,40 +10,46 @@ import News from './page/News'
 // data
 import MovieData from './data/movie.json'
 import ReviewData from './data/review.json'
+import { useState } from 'react'
 
 
 
 
 function App(){
-  let data = []
-  let test = btoa(unescape(encodeURIComponent(MovieData[1].name.replace(/(\s*)/g,"").toLowerCase())))
-  let result = decodeURIComponent(escape(window.atob( test )));
-  console.log(Number(MovieData[0].date.replace(/-/g,"")))
-  console.log(test)
- for (let i of ReviewData[test]){
-  data.push(i)
+  let Rdata = []
+  let Mdata = []
+  const [clue,setClue] = useState(MovieData[1].name)
+  const [query,setQuery] = useState('')
+  let basesixfour = btoa(unescape(encodeURIComponent(clue.replace(/(\s*)/g,"").toLowerCase())))
+  let result = decodeURIComponent(escape(window.atob( basesixfour )));
+
+ for (let i of ReviewData[basesixfour]){
+  Rdata.push(i)
  }
- for (let k of MovieData){
-  let data = btoa(unescape(encodeURIComponent(k.name.replace(/(\s*)/g,"").toLowerCase())))
+ for (let i of MovieData){
+  let data = btoa(unescape(encodeURIComponent(i.name.replace(/(\s*)/g,"").toLowerCase())))
   let score = 0
   let people = 0
-  for (let i of ReviewData[data]){
-    score += i.score
+  for (let j of ReviewData[data]){
+    if (j.length === 0){
+      return false
+    }
+    else{
+    score += j.score
     people++
+    }
   }
-  k["score"] = Math.floor((score/people)*100)/100
-  console.log(k.score)
-  console.log(data)
+  i["score"] = Math.floor((score/people)*100)/100
+  Mdata.push(i)
  }
-
 
   return(
     <BrowserRouter>
     <div id='wrap'>
 
-    <Header/>
+    <Header setQuery = {setQuery} Mdata = {Mdata}/>
     <Routes>
-      <Route path = "/" element ={<Home data = {data}/>}/>
+      <Route path = "/" element ={<Home Rdata = {Rdata} Mdata ={Mdata} setClue = {setClue} clue = {clue}/>}/>
       <Route path = "/news" element ={<News/>}/>
     </Routes>
     <Footer/>
