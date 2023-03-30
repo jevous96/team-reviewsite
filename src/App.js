@@ -20,14 +20,17 @@ function App(){
   let Mdata = []
   const [clue,setClue] = useState(MovieData[1].name)
   const [query,setQuery] = useState('')
+  
+
   let basesixfour = btoa(unescape(encodeURIComponent(clue.replace(/(\s*)/g,"").toLowerCase())))
   let result = decodeURIComponent(escape(window.atob( basesixfour )));
 
- for (let i of ReviewData[basesixfour]){
+ for (let i of ReviewData[clue.replace(/(\s*)/g,"").toLowerCase()]){
   Rdata.push(i)
  }
  for (let i of MovieData){
-  let data = btoa(unescape(encodeURIComponent(i.name.replace(/(\s*)/g,"").toLowerCase())))
+  // let data = btoa(unescape(encodeURIComponent(i.name.replace(/(\s*)/g,"").toLowerCase())))
+  let data = i.name.replace(/(\s*)/g,"").toLowerCase()
   let score = 0
   let people = 0
   for (let j of ReviewData[data]){
