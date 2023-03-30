@@ -1,5 +1,6 @@
 
 import ReviewM from "../modal/Reviewm"
+import './Main.css'
 
 function Listup({ Mdata, type, setClue}){
 
@@ -56,23 +57,45 @@ if (type === "score"){
 else{
   return false
 }
-
-
 }
-
 
 function Home({Rdata, Mdata, setClue, clue}){
   return(
     <article id="home">
       <div id="homewrap">
-        <ul id="recent">
-          <Listup Mdata = {Mdata} type = "recently" setClue ={setClue}/>
-        </ul>
-        <ul id="best">
-          <Listup Mdata = {Mdata} type = "score" setClue ={setClue}/>
-        </ul>
+        <h2 className="hide">main review</h2>
+        <div>
+          <h3>최신 영화순</h3>
+          <div className="album">
+          <div className="gall">
+          <ul id="recent">
+            <Listup Mdata = {Mdata} type = "recently" setClue ={setClue}/>
+          </ul>
+          </div>
+          <p className="next">next</p>
+          <p className="prev">prev</p>
+          </div>
+        </div>
+        <div>
+          <h3>베스트 평점순</h3>
+          <div className="album">
+          <div className="gall">
+          <ul id="best">
+            <Listup Mdata = {Mdata} type = "score" setClue ={setClue}/>
+          </ul>
+          </div>
+          <p className="next">next</p>
+          <p className="prev">prev</p>
+          </div>
+        </div>
         <div id="news">
-          <p>뉴-스</p>
+          <h3>뉴스</h3>
+          <div className="album">
+          <div className="newsp">
+          <p>뉴-스1</p>
+          <p>뉴-스2</p>
+          </div>
+          </div>
         </div>
       </div>
       <ReviewM Rdata = {Rdata} Mdata = {Mdata} clue = {clue}/>

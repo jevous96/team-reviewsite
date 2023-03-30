@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './reset.css'
+import './component.css'
 
 //comp
 import Header from './component/Header'
@@ -21,9 +22,9 @@ function App(){
   const [clue,setClue] = useState(MovieData[1].name)
   const [query,setQuery] = useState('')
   
-
-  let basesixfour = btoa(unescape(encodeURIComponent(clue.replace(/(\s*)/g,"").toLowerCase())))
-  let result = decodeURIComponent(escape(window.atob( basesixfour )));
+// 새로운 코드에서는 사용불가 판정 확인
+  // let basesixfour = btoa(unescape(encodeURIComponent(clue.replace(/(\s*)/g,"").toLowerCase())))
+  // let result = decodeURIComponent(escape(window.atob( basesixfour )));
 
  for (let i of ReviewData[clue.replace(/(\s*)/g,"").toLowerCase()]){
   Rdata.push(i)

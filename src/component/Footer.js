@@ -6,20 +6,18 @@ function Footer(){
     <footer>
       <div id="footerwrap">
         <p id="flogo">icons</p>
-        <div id="contact">
-            <p>
-              <span>icons</span>
-              <span>고객센터</span>
-            </p>
+        <div id="fcontact">
+            <p className="fcicon">icons</p>
+            <p className="fccont">고객센터</p>
         </div>
         <ul id="devloper">
-          <li>git1</li>
-          <li>git2</li>
+          <li><span>icon</span><span>개발자명</span></li>
+          <li><span>icon</span><span>개발자명</span></li>
         </ul>
-        <small>
+      </div>
+      <small>
           copyright&copy;2023 teamproject
         </small>
-      </div>
     </footer>
   )
 }

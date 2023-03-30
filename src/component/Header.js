@@ -3,7 +3,7 @@ import { useState } from "react"
 
 
 function RecommendWord({Mdata,recow,setRcmd }){
-  if (recow === "" || recow === "," ){
+  if (recow === "" || recow === "," || recow.length < 2 ){
     return false
   }
   else{
@@ -44,9 +44,9 @@ function Header({setQuery, Mdata}){
       </form>
       <nav>
         <ul>
-          <li>wrtieicon</li>
-          <li>newsicon</li>
-          <li>accounticon</li>
+          <li className="hwrite">wrtieicon</li>
+          <li className="hnews">newsicon</li>
+          <li className="hacc">accounticon</li>
         </ul>
       </nav>
       </div>
