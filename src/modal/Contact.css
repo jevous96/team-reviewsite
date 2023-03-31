@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+div#contmodal{}
+
+div#contbox{
+  box-sizing: border-box;
+  max-width: 950px;
+  width: 950px;
+  background-color: #fff;
+  padding: 13px 25px;
+  position: relative;
+}
+
+p#cclose{
+  position: absolute;
+  right: 10px; top: 10px;
+  width: 40px; height: 40px;
+  background-color: red;
+}
+
+div#contbox>h2{
+  text-align: center;
+  margin-bottom: 30px;
+}

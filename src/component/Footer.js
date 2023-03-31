@@ -1,12 +1,14 @@
 
-
+import Contact from "../modal/Contact"
 
 function Footer(){
   return(
     <footer>
       <div id="footerwrap">
         <p id="flogo">icons</p>
-        <div id="fcontact">
+        <div id="fcontact" onClick={() => {
+          document.querySelector('div#contmodal').style.display = "flex"
+        }}>
             <p className="fcicon">icons</p>
             <p className="fccont">고객센터</p>
         </div>
@@ -18,6 +20,7 @@ function Footer(){
       <small>
           copyright&copy;2023 teamproject
         </small>
+      <Contact/>
     </footer>
   )
 }

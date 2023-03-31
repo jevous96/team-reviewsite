@@ -103,8 +103,8 @@ div.newsp{
   box-sizing: border-box;
 }
 
-div.newsp>p{
-  width: 500px;
+div.newsp>figure{
+  max-width: 500px;
   background-color: #D9D9D9;
 }
 

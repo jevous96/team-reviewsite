@@ -1,9 +1,10 @@
-
+import './Contact.css'
 
 function Contact(){
   return(
-    <div id="contmodal">
+    <div id="contmodal" className="modalbase">
       <div id="contbox">
+        <p id="cclose" onClick={() => {document.querySelector('div#contmodal').style.display = "none"}}>close</p>
         <h2>Contact</h2>
         <form>
           <fieldset>

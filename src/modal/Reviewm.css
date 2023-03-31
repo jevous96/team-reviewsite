@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+
+div#reviewmodal{
+  background-color: rgba(174, 144, 255, 0.5);
+  padding: 5px 0;
+}
+
+div#modalbox{
+  box-sizing: border-box;
+  max-width: 950px;
+  width: 950px;
+  background-color: #fff;
+  padding: 13px 25px;
+  position: relative;
+}
+
+div#modalbox>h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p#mclose{
+  position: absolute;
+  right: 10px; top: 10px;
+  width: 40px; height: 40px;
+  background-color: red;
+}
+
+div#moviedata{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+p.video{
+  max-width: 600px;
+  width: 600px;
+  height: 300px;
+  background-color: grey;
+}
+
+p.videoinfo{
+  max-width: 300px;
+  width: 300px;
+}
+
+div#reviewdata{
+  padding: 5px  10px;
+  background-color: rgba(174, 144, 255, 1);
+  overflow-y: scroll;
+}
+
+div#reviewdata>figure{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+
+div#reviewdata>figure>img{
+  display: block;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+div#reviewdata>figure>figcaption{
+  max-width: calc(100%-30px);
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div#reviewdata>figure>figcaption>h3{
+  padding: 0 5px;
+}
+p.score{
+  padding: 0 5px;
+  border-left: 1px solid #000;
+}
+p.reviewing{
+  width: 100%;
+  padding: 5px;
+}
+
+
+
+@media screen and (min-width : 1440px) {}
+@media screen and (min-width : 980px) and (max-width:1440px) {}
+@media screen and (min-width : 580px) and (max-width:980px) {}
+@media screen and (min-width : 5px) and (max-width:580px) {}

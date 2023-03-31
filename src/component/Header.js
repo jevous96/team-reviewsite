@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 
-
 function RecommendWord({Mdata,recow,setRcmd }){
   if (recow === "" || recow === "," || recow.length < 2 ){
     return false
@@ -50,6 +49,7 @@ function Header({setQuery, Mdata}){
         </ul>
       </nav>
       </div>
+
     </header>
   )
 }

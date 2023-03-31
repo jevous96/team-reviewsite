@@ -3,7 +3,7 @@
 
 function Login(){
   return(
-    <div id="logmodal">
+    <div id="logmodal" className="modalbase">
       <div id="logbox">
         <h2>Login</h2>
         <form>
