@@ -19,22 +19,19 @@ import { useState } from 'react'
 function App(){
   let Rdata = []
   let Mdata = []
+  const [ReviwD, setReviewD] = useState(ReviewData)
+  const [MovieD, setMovieD] = useState(MovieData)
   const [clue,setClue] = useState(MovieData[1].name)
   const [query,setQuery] = useState('')
-  
-// 새로운 코드에서는 사용불가 판정 확인
-  // let basesixfour = btoa(unescape(encodeURIComponent(clue.replace(/(\s*)/g,"").toLowerCase())))
-  // let result = decodeURIComponent(escape(window.atob( basesixfour )));
 
- for (let i of ReviewData[clue.replace(/(\s*)/g,"").toLowerCase()]){
+ for (let i of ReviwD[clue.replace(/(\s*)/g,"").toLowerCase()]){
   Rdata.push(i)
  }
- for (let i of MovieData){
-  // let data = btoa(unescape(encodeURIComponent(i.name.replace(/(\s*)/g,"").toLowerCase())))
+ for (let i of MovieD){
   let data = i.name.replace(/(\s*)/g,"").toLowerCase()
   let score = 0
   let people = 0
-  for (let j of ReviewData[data]){
+  for (let j of ReviwD[data]){
     if (j.length === 0){
       return false
     }
@@ -53,7 +50,7 @@ function App(){
 
     <Header setQuery = {setQuery} Mdata = {Mdata}/>
     <Routes>
-      <Route path = "/" element ={<Home Rdata = {Rdata} Mdata ={Mdata} setClue = {setClue} clue = {clue}/>}/>
+      <Route path = "/" element ={<Home Rdata = {Rdata} Mdata ={Mdata} query ={query} setClue = {setClue} clue = {clue}/>}/>
       <Route path = "/news" element ={<News/>}/>
     </Routes>
     <Footer/>

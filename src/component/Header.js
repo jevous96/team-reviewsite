@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 function RecommendWord({Mdata,recow,setRcmd }){
@@ -27,7 +28,8 @@ function Header({setQuery, Mdata}){
   return(
     <header>
       <div id="headwrap">
-      <h1><img src="" alt="logo"/><span>Logois here</span></h1>
+      <h1>
+        <Link to='/'><img src="" alt="logo"/><span>Logois here</span></Link></h1>
       <form>
         <fieldset>
           <legend>
@@ -44,7 +46,8 @@ function Header({setQuery, Mdata}){
       <nav>
         <ul>
           <li className="hwrite">wrtieicon</li>
-          <li className="hnews">newsicon</li>
+          <li className="hnews">
+            <Link to='/news'>newsicon</Link></li>
           <li className="hacc">accounticon</li>
         </ul>
       </nav>

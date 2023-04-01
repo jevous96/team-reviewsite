@@ -65,7 +65,8 @@ else{
 }
 }
 
-function Home({Rdata, Mdata, setClue, clue}){
+function Home({Rdata, Mdata, setClue, clue, query}){
+  let FMdata = Mdata.filter((item) => {return item.name.replace(/(\s*)/g,"").toLowerCase().includes(query.toLowerCase().trim().replace(/(\s*)/g,"")) || item.story.replace(/(\s*)/g,"").toLowerCase().includes(query.toLowerCase().trim().replace(/(\s*)/g,"")) || item.actor.replace(/(\s*)/g,"").toLowerCase().includes(query.toLowerCase().trim().replace(/(\s*)/g,"")) || item.director.replace(/(\s*)/g,"").toLowerCase().includes(query.toLowerCase().trim().replace(/(\s*)/g,""))})
   return(
     <article id="home">
       <div id="homewrap">
@@ -75,7 +76,7 @@ function Home({Rdata, Mdata, setClue, clue}){
           <div className="album">
           <div className="gall">
           <ul id="recent">
-            <Listup Mdata = {Mdata} type = "recently" setClue ={setClue}/>
+            <Listup Mdata = {FMdata} type = "recently" setClue ={setClue}/>
           </ul>
           </div>
           <p className="next">next</p>
@@ -87,7 +88,7 @@ function Home({Rdata, Mdata, setClue, clue}){
           <div className="album">
           <div className="gall">
           <ul id="best">
-            <Listup Mdata = {Mdata} type = "score" setClue ={setClue}/>
+            <Listup Mdata = {FMdata} type = "score" setClue ={setClue}/>
           </ul>
           </div>
           <p className="next">next</p>
