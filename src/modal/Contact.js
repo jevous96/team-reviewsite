@@ -33,13 +33,13 @@ function Contact(){
   }
 
   function ResetContact(){
-    document.querySelector('div#contmodal').style.display = "none"
     contname.value = ""
     contname.previousElementSibling.style.opacity = "1"
     contmail.value = ""
     contmail.previousElementSibling.style.opacity = "1"
     contmsg.value = ""
     contmsg.previousElementSibling.style.opacity = "1"
+    document.querySelector('div#contmodal').style.display = "none"
   }
 
 

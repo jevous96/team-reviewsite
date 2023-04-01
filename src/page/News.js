@@ -5,19 +5,19 @@ function NewsList({area}){
   
   return areas.map((item) => {
     return(
-      <div id="newsgall">
+      
               <ul>
                 <li>
                   <figure>
                     <img src="" alt=""/>
                     <figcaption>
-                      <h3>Newstitle{item}</h3>
-                      <p>NewsDate</p>
+                      <h3 className="ntitle">Newstitle{item}</h3>
+                      <p className="ndate">NewsDate</p>
                     </figcaption>
                   </figure>
                 </li>
               </ul>
-            </div>
+
     )
   })
   
@@ -25,34 +25,30 @@ function NewsList({area}){
   
 }
 
-function News(){
+function News({Ndata}){
   return (
    <article id="news">
     <div id="newswrap">
       <h2 className="hide">News</h2>
       <div id="News">
         <div id="recently">
+          <div id="newsgall">
             <NewsList area={'recently'}/>          
+          </div>
         </div>
         <div id="interview">
-            <NewsList area={'interview'}/>          
+          <div id="newsgall">
+            <NewsList area={'interview'}/>  
+          </div>        
         </div>
         <div id="award">
-            <NewsList area={'award'}/>          
+          <div id="newsgall">
+            <NewsList area={'award'}/>
+          </div>          
         </div>
       </div>
       <div id="newsside">
-        <ul>
-          <li>
-            <figure>
-              <img src="" alt="Bestnews1"/>
-              <figcaption>
-                <h3 className="ntitle">Newstitle</h3>
-                <p className="ndate">NewsDate</p>      
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+            <NewsList area={'count'}/>
       </div>
     </div>
     
