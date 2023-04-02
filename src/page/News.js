@@ -1,28 +1,39 @@
 
+import './News.css'
 
-function NewsList({area}){
-  let areas = [1,2,3,4]
-  
-  return areas.map((item) => {
+function NewsList({area, Ndata}){
+  let areas = []
+  if(area === "recently"){
+    areas = Ndata.sort((a,b) => {
+      return Number(a.date.replace(/-/g,"")) > Number(b.date.replace(/-/g,"")) ? -1 : 1
+    }).slice(0,3)}
+  if (area === "award"){
+    areas = Ndata.filter((item) => {
+      return item.type === "award"
+    })}
+  if (area === "interview"){
+    areas = Ndata.filter((item) => {
+      return item.type === "interview"
+    })}
+  if (area === "count"){
+    areas = Ndata.sort((a,b) => {
+      return a.count > b.count ? -1 : 1
+    }).slice(0,5)
+  }
+  return areas.map((item,index) => {
     return(
-      
-              <ul>
-                <li>
-                  <figure>
-                    <img src="" alt=""/>
-                    <figcaption>
-                      <h3 className="ntitle">Newstitle{item}</h3>
-                      <p className="ndate">NewsDate</p>
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
+        <li key={index}>
+          <figure>
+            <img src="" alt=""/>
+            <figcaption>
+              <h3 className="ntitle">{item.title}</h3>
+              <p className="ndate">{item.date}</p>
+            </figcaption>
+          </figure>
+        </li>
 
     )
   })
-  
-  
-  
 }
 
 function News({Ndata}){
@@ -31,24 +42,46 @@ function News({Ndata}){
     <div id="newswrap">
       <h2 className="hide">News</h2>
       <div id="News">
-        <div id="recently">
-          <div id="newsgall">
-            <NewsList area={'recently'}/>          
+        <div id="Nrecently">
+          <div className='subtitle'>
+            <h2>최신뉴스</h2>
+            <p className="Nallview">view all</p>
+          </div>
+          <div className = "newsgall">
+          <ul>
+            <NewsList Ndata = {Ndata} area='recently'/>     
+          </ul>     
           </div>
         </div>
-        <div id="interview">
-          <div id="newsgall">
-            <NewsList area={'interview'}/>  
+        <div id="Ninterview">
+        <div className='subtitle'>
+          <h2>스타인터뷰</h2>
+          <p className="Nallview">view all</p>
+          </div>
+          <div className = "newsgall">
+            <ul>
+              <NewsList Ndata = {Ndata} area='interview'/>
+            </ul>  
           </div>        
         </div>
-        <div id="award">
-          <div id="newsgall">
-            <NewsList area={'award'}/>
+        <div id="Naward">
+          <div className='subtitle'>
+            <h2>어워드</h2>
+            <p className="Nallview">view all</p>
+          </div>
+          <div className = "newsgall">
+            <ul>
+              <NewsList Ndata = {Ndata} area='award'/>
+            </ul>
           </div>          
         </div>
       </div>
-      <div id="newsside">
-            <NewsList area={'count'}/>
+      <div id="Nnewsside">
+        <h2>가장 많이본 뉴스</h2>
+        <p className="Nallview">view all</p>
+        <ul>
+            <NewsList Ndata = {Ndata} area='count'/>
+        </ul>
       </div>
     </div>
     

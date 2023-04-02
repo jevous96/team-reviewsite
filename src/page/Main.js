@@ -5,13 +5,12 @@ import './Main.css'
 
 function NewsCard({Ndata, setNewsD}){
   let mainnews = []
-  let test = Ndata.sort((a,b) => {
+  let bestnews = Ndata.sort((a,b) => {
     return (a.count > b.count ? -1 : 1)
   })
-  console.log(test)
   
   for (let i = 0; i < 2 ; i++){
-    mainnews.push(test[i])
+    mainnews.push(bestnews[i])
   }
 
   function Countup(x){
