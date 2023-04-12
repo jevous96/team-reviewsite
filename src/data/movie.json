@@ -1,0 +1,52 @@
+[
+  {
+    "id" : 0,
+    "name" : "리바운드",
+    "story" : "this story is start from xxxx end is xxxx",
+    "src" : "youtube.com",
+    "pic" :"./images/poster/reboundposter.jpg",
+    "date" : "2021-02-03",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
+  },
+  {
+    "id" : 1,
+    "name" : "더 퍼스트 슬램덩크",
+    "story" : "this story is start from xxxx end is xxxx",
+    "src" : "youtube.com",
+    "pic" :"./images/poster/slamdunk.jpg",
+    "date" : "2022-03-14",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
+  },
+  {
+    "id" : 2,
+    "name" : "스즈메의 문단속",
+    "story" : "this story is start from xxxx end is xxxx",
+    "src" : "youtube.com",
+    "pic" :"./images/poster/suzume.jpg",
+    "date" : "2023-01-01",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
+  },
+  {
+    "id" : 3,
+    "name" : "킬링 로맨스",
+    "story" : "this story is start from xxxx end is xxxx",
+    "src" : "youtube.com",
+    "pic" :"./images/poster/killingromance.jpg",
+    "date" : "2021-08-08",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
+  },
+  {
+    "id" : 4,
+    "name" : "존 윅 4",
+    "story" : "this story is start from xxxx end is xxxx",
+    "src" : "youtube.com",
+    "pic" :"./images/poster/johnwickchapter4.jpg",
+    "date" : "2023-04-05",
+    "director" : "감독이름",
+    "actor" : "actor1, actor2, actor3, actor4"
+  }
+]
