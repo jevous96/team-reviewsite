@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+
+div#contmodal{
+  display: none;
+}
+
+div#contbox{
+  box-sizing: border-box;
+  max-width: 950px;
+  width: 950px;
+  background-color: #fff;
+  padding: 30px 25px;
+  position: relative;
+}
+
+p#cclose{
+  position: absolute;
+  right: 10px; top: 10px;
+  width: 40px; height: 40px;
+  background-color: red;
+}
+
+div#contbox>h2{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+div#contbox>form{
+  width: 84.21052631578947%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+legend.contactform{
+  width: 100%;
+}
+legend.contactform>ul{
+  margin-bottom: 20px;
+}
+legend.contactform>ul>li{
+  position: relative;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+legend.contactform>ul>li>label{
+  position: absolute;
+  line-height: 50px;
+  left: 10px; top: 0;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+legend.contactform>ul>li>input{
+  text-indent: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  line-height: 50px;
+  border: none;
+  background-color: rgba(176, 230, 241, 1);
+  font-size: 18px;
+}
+
+legend.contactform>ul>li>textarea{
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(176, 230, 241, 1);
+  resize: none;
+  text-indent: 10px;
+  font-size: 18px;
+  padding: 3px 0;
+  line-height: 1.5em;
+  border: none;
+}
+
+legend.contactform>button{
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  padding: 10px 25px;
+}
+
+@media screen and (min-width : 1440px) {}
+@media screen and (min-width : 980px) and (max-width:1440px) {}
+@media screen and (min-width : 580px) and (max-width:980px) {
+  div#contbox{
+    max-width: 96%;
+    height: 90vh;
+  }
+
+
+}
+@media screen and (min-width : 5px) and (max-width:580px) {
+  div#contbox{
+    max-width: 100%;
+    height: calc(100vh + 20px)
+  }
+
+}

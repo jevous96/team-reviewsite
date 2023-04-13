@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap');
+
+body{
+  font-family: 'Roboto','Noto Sans KR', sans-serif;
+  font-size: 16px;
+}
+
+div#wrap{
+  width: 100%;
+}
+/* header */
+
+header{
+  width: 100%;
+  /* width: 1440px; */
+  position: fixed;
+  left: 0; top: 0;
+  padding: 15px 0;
+  background-color: #795BCD;
+  z-index: 30;
+}
+
+div#headwrap{
+  width: 90.27777777777778%;
+  /* width: 1300px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div#headwrap>h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.69230769230769%;
+  /* width: 165px; */
+}
+
+div#headwrap>h1>a>img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+div#headwrap>h1>span{
+  font-size: 33px;
+}
+
+div#headwrap>form{
+  width: 46.15384615384615%;
+  /* width: 600px; */
+}
+
+div#headwrap>form>fieldset{
+  width: 100%;
+  position: relative;
+}
+div#headwrap>form>fieldset>ul{
+  width: 95.87666666666667%;
+  margin: 0 auto;
+  position: absolute;
+  top: 100%;
+  left: 12.37px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+div#headwrap>form>fieldset>ul>li{
+  padding: 5px 20px;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+div#headwrap>form>fieldset>legend{
+  width: 100%;
+  position: relative;
+}
+div#headwrap>form>fieldset>legend>label{
+  width: 26.25px;
+  height: 26.25px;
+  position: absolute;
+  right: 2.061666666666667%;
+  top: 24.74%;
+}
+
+div#headwrap>form>fieldset>legend>label>img{
+  display: block;
+  max-width: 100%;
+}
+
+div#headwrap>form>fieldset>legend>input{
+  width: 100%;
+  line-height: 50px;
+  text-indent: 12.37px;
+  border-radius: 25px 25px 25px 25px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.55);
+  border: none;
+}
+
+div#headwrap>form>fieldset>legend>input:focus{
+  border: 1px solid #523e8a;
+}
+
+
+div#headwrap>nav{
+  width: 22.36538461538462%;
+  /* width: 290.75px; */
+  
+}
+
+div#headwrap>nav>ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#headwrap>nav>ul>li{
+  max-width: 40px;
+  max-height: 40px;
+  height: 40px;
+}
+
+div#headwrap>nav>ul>li>img{
+  width: 40px;
+  display: block;
+  max-width: 100%;
+}
+
+div#headwrap>nav>ul>li>a{}
+
+div#headwrap>nav>ul>li>a>img{
+  width: 40px;
+  display: block;
+  max-width: 100%;
+}
+
+
+/* footer */
+footer{
+  width: 100%;
+  /* width: 1440px; */
+  padding: 50px 0 23px;
+  background-color: #795BCD;
+}
+
+footer>small{
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  color: #d3d3d3;
+}
+
+div#footerwrap{
+  padding: 0 28px;
+  width: 90.27777777777778%;
+  /* width: 1300px; */
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p#flogo{
+  /* max-width: 221px; */
+  max-width: 17%;
+}
+
+p#flogo>img{
+  display: block;
+  max-width: 100%;
+  width: 128px;
+}
+
+div#fcontact{
+  /* max-width: 340px; */
+  max-width: 26.15384615384615%;
+}
+
+p.fcicon{
+  text-align: center;
+}
+p.fcicon>img{
+  width: 50px;
+  margin-bottom: 15px;
+}
+p.fccont{
+  text-align: center;
+  color: #fff;
+  line-height: 1.5em;
+}
+p.fccont>span{
+  display: block;
+  
+}
+
+ul#devloper{}
+ul#devloper>li{
+  margin: 10px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+ul#devloper>li>img{
+  width: 30px;
+  height: 30px;
+}
+
+ul#devloper>li>a{
+  margin: 0 10px;
+  color: #fff;
+}
+article{
+  width: 100%;
+  padding-top: 82px;
+  
+}
+
+div.modalbase{
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.55);
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+@media screen and (min-width : 1440px) {
+  div#wrap{
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+}
+@media screen and (min-width : 980px) and (max-width:1440px) {
+  div#headwrap>h1{
+    width: 15%;
+  }
+  div#headwrap>form{
+    width: 49%
+  }
+  div#headwrap>nav{
+    width: 21.5%;    
+  }
+
+}
+@media screen and (min-width : 580px) and (max-width:980px) {
+
+
+  div#headwrap{
+    width: 97%;
+  }
+  div#headwrap>h1{
+    width: 15%;
+  }
+  div#headwrap>form{
+    width: 52%
+  }
+  div#headwrap>form>fieldset>legend>input{
+    line-height: 36px;
+  }
+
+  div#headwrap>nav>ul>li{
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+  div#footerwrap{
+    width: 97%;
+    padding: 0;
+  }
+
+  ul#devloper>li{
+    margin: 10px 0;
+  }
+  article{
+    width: 100%;
+    padding-top: 68px;
+  }
+
+
+}
+@media screen and (min-width : 5px) and (max-width:580px) {
+
+  div#headwrap{
+    width: 94.14758269720102%;
+  }
+  div#headwrap>h1{
+   width: 20%;
+  }
+  div#headwrap>form{
+    width: 70%;
+  }
+  div#headwrap>form>fieldset>legend>input{
+    line-height: 35px;
+  }
+
+  div#headwrap>nav{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    left: 0; bottom: 0;
+    padding: 20px 0;
+    background-color: #795BCD;
+  }
+  div#headwrap>nav>ul{
+    justify-content: space-around;
+  }
+  footer{
+    width: 100%;
+    /* width: 1440px; */
+    padding: 50px 0 120px;
+    background-color: #795BCD;
+  }
+  
+
+  div#footerwrap{
+    width: 97%;
+    padding: 0 ;
+  }
+
+  ul#devloper>li{
+    margin: 10px 0;
+  }
+  article{
+    width: 100%;
+    padding-top: 67px;
+  }
+
+
+}
