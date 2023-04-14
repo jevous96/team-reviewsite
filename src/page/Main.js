@@ -62,7 +62,7 @@ return data.map((item,index) => {
           <p>
           <img src={item.pic} alt={item.title}/>
           <span onClick = {() => {Showmovie(item.name)}}>
-           <img src="./images/icon/play.png" alt="play" />
+           <img src="./images/icon/playt.png" alt="play" />
           </span>
           </p>
           <figcaption>

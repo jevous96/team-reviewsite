@@ -39,7 +39,7 @@ function Header({setQuery, Mdata}){
             <label htmlFor="msearch" onClick={() => {
               setQuery(document.querySelector('input#msearch').value)
             }}><img  src="./images/icon/search.png" alt="search"/></label>
-            <input name = "msearch" id="msearch" placeholder = "키워드를 입력" onChange={(e) => setRcmd(e.target.value)}/>
+            <input name = "msearch" id="msearch" placeholder = "키워드를 입력해주세요." onChange={(e) => setRcmd(e.target.value)}/>
           </legend>
           <ul id="recommend">
             <RecommendWord Mdata = {Mdata} recow ={rcmd} setRcmd = {setRcmd}/>

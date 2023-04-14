@@ -174,7 +174,7 @@ div#Nnewsside>ul>li>figure>figcaption>h3.ntitle{
     text-align: center;
   }
   div#Nnewsside>ul{
-    background-color: #AE90FF;
+    /* background-color: #AE90FF; */
     padding: 3px;
   }
   div#Nnewsside>ul>li>figure>figcaption{
@@ -214,7 +214,7 @@ div#Nnewsside>ul>li>figure>figcaption>h3.ntitle{
   div.newsgall>ul{
     width: auto;
     display: block;
-    background-color: #AE90FF;
+    /* background-color: #AE90FF; */
     padding: 10px 5px;
   }
 
@@ -246,7 +246,7 @@ div#Nnewsside>ul>li>figure>figcaption>h3.ntitle{
 
   div#Nnewsside>ul{
     width: auto;
-    background-color: #AE90FF;
+    /* background-color: #AE90FF; */
     padding: 5px;
     display: flex;
     align-items: center;
@@ -268,7 +268,7 @@ div#Nnewsside>ul>li>figure>figcaption>h3.ntitle{
   div#Nnewsside>ul>li>figure>img{
   display: block;
   max-width: 250px;
-  max-height: 103px;
+  max-height: 200px;
   width: 250px;
   height: 240px;
   background-color: grey;

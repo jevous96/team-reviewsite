@@ -127,17 +127,32 @@ div.newsp{
 }
 
 div.newsp>figure{
-  max-width: 38.46153846153846%;
+  /* max-width: 38.46153846153846%; */
   /* max-width: 500px; */
   width: 500px;
   font-size: 25px;
 }
-
+div.newsp>figure>figcaption{
+  text-align: center;
+  
+}
 div.newsp>figure>img{
   margin: 0 auto;
   display: block;
-  max-width: 40%;
+  max-width: 100%;
+  max-height: 250px;
+  margin-bottom: 20px;
 }
+div.newsp>figure>figcaption>p.mndate{
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #4f4f4f;
+}
+div.newsp>figure>figcaption>p.mntitle{
+  font-size: 18px;
+  line-height: 1.4em;
+}
+
 
 
 @media screen and (min-width : 1440px) {
@@ -277,9 +292,28 @@ div.gall>ul>li{
     margin-top: -18.5px; margin-left: -18.5px;
   }
   div.gall>ul>li>figure>figcaption>p{
-    font-size: 12px;  }
-    div.newsp{
-      width: 98%;
-    }
+    font-size: 12px;  
+  }
+
+  div.newsp{
+    width: 98%;
+    display: block;
+  }
+
+  div.newsp>figure{
+    max-width: none;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  div.newsp>figure>img{
+    max-width: 60%;
+    margin-bottom: 10px;
+  }
+  div.newsp>figure>figcaption>p.mntitle{
+    font-size: 23px;
+    padding: 0 40px;
+  }
+  
 
 }

@@ -97,4 +97,20 @@ ul#logset>li{
     max-width: 100%;
     height: calc(100vh + 20px)
   }
+  p#lclose{
+    top: 25px;
+  }
+  p#lclose>img{
+    width: 35px;
+    height: 35px;
+  }
+  #logbox img{
+    width: 100px;
+  }
+  div#logbox>form input{
+    width: 310px;
+  }
+  div#logbox>form button{
+    width: 310px;
+  }
 }

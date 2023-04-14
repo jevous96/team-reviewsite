@@ -142,5 +142,12 @@ p.reviewing{
     height: 300px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }
+  p#pclose{
+    top: 25px;
+  }
+  p#pclose>img{
+    width: 35px;
+    height: 35px;
+  }
 
 }
