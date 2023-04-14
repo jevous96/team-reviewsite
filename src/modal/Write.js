@@ -1,6 +1,5 @@
+import { reset } from '../api/api'
 import './Write.css'
-
-
 
 function ScoreRadio(){
   let score  = [1,2,3,4,5]
@@ -14,21 +13,11 @@ function ScoreRadio(){
   })
 }
 
-function ResetWrite(){
-  document.querySelector('input#wsearch').value = ""
-  document.querySelector('input#wsearch').previousElementSibling.style.opacity = "1"
-  document.querySelector('textarea#wreview').value = ""
-  document.querySelector('textarea#wreview').previousElementSibling.style.opacity = "1"
-  document.querySelector('div#writemodal').style.display = "none"
-}
-
-
-
 function WriteReview(){
   return(
     <div id="writemodal" className="modalbase">
       <div id="writebox">
-        <p id="wclose" onClick={() => {ResetWrite()}}>
+        <p id="wclose" onClick={() => {reset("#writemodal",true)}}>
           <img src="./images/icon/x.png" alt="x"/> 
         </p>
         <h2><img src="./images/icon/modallogo.png" alt="logo"/> <span>나의 평점 리뷰</span></h2>

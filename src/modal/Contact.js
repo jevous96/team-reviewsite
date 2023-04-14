@@ -1,3 +1,4 @@
+import { reset } from '../api/api';
 import './Contact.css'
 
 
@@ -25,25 +26,15 @@ function Contact(){
     (newmessage.name = document.querySelector('input#uname').value,
     newmessage.mail = document.querySelector('input#umail').value,
     newmessage.message = document.querySelector('textarea#umessage').value,
-    console.log(newmessage),
-    ResetContact())
+    console.log(newmessage))
   }
-
-  function ResetContact(){
-    document.querySelector('input#uname').value = ""
-    document.querySelector('input#uname').previousElementSibling.style.opacity = "1"
-    document.querySelector('input#umail').value = ""
-    document.querySelector('input#umail').previousElementSibling.style.opacity = "1"
-    document.querySelector('textarea#umessage').value = ""
-    document.querySelector('textarea#umessage').previousElementSibling.style.opacity = "1"
-    document.querySelector('div#contmodal').style.display = "none"
-  }
-
 
   return(
     <div id="contmodal" className="modalbase">
       <div id="contbox">
-        <p id="cclose" onClick={() => {ResetContact()}}>close</p>
+        <p id="cclose" onClick={() => {reset("#contmodal",true)}}>
+        <img src="./images/icon/x.png" alt="x"/>
+        </p>
         <h2>Contact</h2>
         <form>
           <fieldset>

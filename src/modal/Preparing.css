@@ -1,5 +1,44 @@
-#prewrap h2{}
-#prewrap h2>img{}
-#prewrap h2>span{}
+#premodal{
+  display: none;
+  z-index: 50;
+}
 
-#prewrap p>span{}
+#prewrap{
+  box-sizing: border-box;
+  max-width: 950px;
+  width: 950px;
+  background-color: #fff;
+  padding: 13px 25px;
+  position: relative;
+  text-align: center;
+}
+#pclose{
+  position: absolute;
+  right: 10px; top: 10px;
+  width: 40px; height: 40px;
+}
+#pclose>img{
+  width: 40px;
+  height: 40px;
+}
+#prewrap h2{
+  margin-top: 150px;
+}
+#prewrap h2>img{
+  width: 70px;
+  margin-bottom: 20px;
+}
+#prewrap h2>span{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#prewrap p{
+  margin-bottom: 150px;
+}
+
+#prewrap p>span{
+  display: block;
+  line-height: 1.5em;
+  color: #4f4f4f;
+}

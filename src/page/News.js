@@ -1,7 +1,6 @@
 
 import './News.css'
-import Preparing from '../modal/Preparing'
-
+import { prepareshow } from '../api/api'
 
 function NewsList({area, Ndata}){
   let areas = []
@@ -38,6 +37,13 @@ function NewsList({area, Ndata}){
   })
 }
 
+function View(){
+  return(
+    <p className="Nallview" onClick={() => {
+      prepareshow('flex')}}>view all</p>
+  )
+}
+
 function News({Ndata}){
   return (
    <article id="news">
@@ -47,7 +53,7 @@ function News({Ndata}){
         <div id="Nrecently">
           <div className='subtitle'>
             <h2>최신뉴스</h2>
-            <p className="Nallview">view all</p>
+            <View/>
           </div>
           <div className = "newsgall">
           <ul>
@@ -58,7 +64,7 @@ function News({Ndata}){
         <div id="Ninterview">
         <div className='subtitle'>
           <h2>스타인터뷰</h2>
-          <p className="Nallview">view all</p>
+          <View/>
           </div>
           <div className = "newsgall">
             <ul>
@@ -69,7 +75,7 @@ function News({Ndata}){
         <div id="Naward">
           <div className='subtitle'>
             <h2>어워드</h2>
-            <p className="Nallview">view all</p>
+            <View/>
           </div>
           <div className = "newsgall">
             <ul>
@@ -80,13 +86,13 @@ function News({Ndata}){
       </div>
       <div id="Nnewsside">
         <h2>가장 많이본 뉴스</h2>
-        <p className="Nallview">view all</p>
+        <View/>
         <ul>
             <NewsList Ndata = {Ndata} area='count'/>
         </ul>
       </div>
     </div>
-    <Preparing/>
+   
    </article>
   )
 }
